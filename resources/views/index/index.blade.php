@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about-us">About</a>
-    </nav>
+@extends('layouts.main', [
+    'current_page' => 'home'
+])
+
+@section('content')
+
 
     <h1>Hello mate!</h1>
 
@@ -19,5 +11,5 @@
 
     <p>Prosciutto chuck leberkas porchetta meatloaf. Sirloin hamburger bacon beef ribs, beef shoulder tri-tip. Chislic turkey pork belly sirloin jowl. Ribeye picanha pork loin filet mignon. Pig ribeye pork loin beef.</p>
     
-</body>
-</html>
+
+@endsection

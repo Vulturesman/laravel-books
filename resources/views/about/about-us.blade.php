@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Us</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about-us">About</a>
-    </nav>
+@extends('layouts.main', [
+    'current_page' => 'about'
+])
+
+@section('content')
+
 
     <h1>About Us</h1>
 
@@ -19,5 +11,5 @@
 
     <p>Yeah, I want a date with Bo Derek. We all want things. You’re going to be home by 8, listening to the Talking Heads and reading Vonnegut or something. That sounds like a nice night. Friends don't lie. You act like you want me to be your friend and then you treat me like garbage.</p>
     
-</body>
-</html>
+
+@endsection
