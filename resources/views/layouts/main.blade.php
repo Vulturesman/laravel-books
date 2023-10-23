@@ -21,6 +21,7 @@
 
         @yield('content')
 
+        @vite('resources/css/app.scss')
 
     </body>
 </html>
