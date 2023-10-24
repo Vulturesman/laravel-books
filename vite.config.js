@@ -8,7 +8,11 @@ export default ({ mode }) => {
     return defineConfig({
         plugins: [
             laravel({
-                input: ["resources/css/app.scss", "resources/js/partners.jsx"],
+                input: [
+                    "resources/css/app.scss",
+                    "resources/js/partners.jsx",
+                    "resources/js/latest-books.js",
+                ],
                 refresh: true,
             }),
             react(),

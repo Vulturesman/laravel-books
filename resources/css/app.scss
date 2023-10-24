@@ -1,3 +1,33 @@
 h1 {
     text-transform: capitalize;
 }
+
+.highlighted {
+    font-size: 1.2rem;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotation 1s infinite linear;
+}
+
+#loader {
+    display: none;
+}
+
+#cat {
+    width: 50rem;
+}
+
+li {
+    list-style: url("../assets/img/favicon-32x32.png");
+}

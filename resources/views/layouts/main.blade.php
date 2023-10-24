@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Great Book Shop</title>
+    @vite('resources/css/app.scss')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
     <style>
-        .highlighted {
-            font-size: 1.2rem;
-        }
+       
     </style>
     
 </head>
@@ -23,9 +22,15 @@
 
         <div id="partners"></div>
 
+         <ul id="latest-books"></ul>
+
+        <div id="loader" class="rotate">
+            <img id="cat" src="assets/img/cat.png" alt="rotating cat" />
+        </div>
+
         @viteReactRefresh
-        @vite('resources/css/app.scss')
         @vite('resources/js/partners.jsx')
+        @vite('resources/js/latest-books.js')
 
     </body>
 </html>
