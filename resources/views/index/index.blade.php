@@ -1,5 +1,5 @@
 @extends('layouts.main', [
-    'current_page' => 'home'
+    'current_page' => 'index'
 ])
 
 @section('content')

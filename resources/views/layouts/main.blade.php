@@ -7,10 +7,6 @@
     <title>Great Book Shop</title>
     @vite('resources/css/app.scss')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
-    <style>
-       
-    </style>
-    
 </head>
     <body>
 
