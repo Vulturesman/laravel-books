@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
@@ -25,3 +26,5 @@ Route::get('api/test/model', [TestController::class, 'modelResponse'])->name('mo
 Route::get('api/test/collection', [TestController::class, 'collectionResponse'])->name('collection.response');
 
 Route::get('/home', [HomeController::class, 'home'])->middleware('auth')->name('home');
+
+Route::get('/book/{book_id}', [BookController::class, 'show'])->name('book.detail');

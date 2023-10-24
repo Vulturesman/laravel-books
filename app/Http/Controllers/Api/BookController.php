@@ -22,4 +22,9 @@ class BookController extends Controller
 
         return $books;
     }
+
+    public function show()
+    {
+        return view('detail.book');
+    }
 }
