@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\Admin\BookController as AdminBookController;
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\HomeController;
@@ -28,3 +29,14 @@ Route::get('api/test/collection', [TestController::class, 'collectionResponse'])
 Route::get('/home', [HomeController::class, 'home'])->middleware('auth')->name('home');
 
 Route::get('/book/{book_id}', [BookController::class, 'show'])->name('book.detail');
+
+
+// all admin routes
+Route::group([
+    'middleware' => 'can:admin' // * settings of the group
+], function () {
+
+    // any routes defined in here will automatically get the settings (*) from the group
+
+    Route::get('/admin/books', [AdminBookController::class, 'index']);
+});
