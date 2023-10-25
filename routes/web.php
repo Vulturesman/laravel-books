@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\Admin\BookController as AdminBookController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\HomeController;
@@ -39,4 +40,6 @@ Route::group([
     // any routes defined in here will automatically get the settings (*) from the group
 
     Route::get('/admin/books', [AdminBookController::class, 'index']);
+
+    Route::get('/admin/users', [UserController::class, 'index']);
 });
