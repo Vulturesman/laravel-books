@@ -12,6 +12,7 @@
 
     <p>Prosciutto chuck leberkas porchetta meatloaf. Sirloin hamburger bacon beef ribs, beef shoulder tri-tip. Chislic turkey pork belly sirloin jowl. Ribeye picanha pork loin filet mignon. Pig ribeye pork loin beef.</p>
 
+    @include('common.search')
 
     <h2>10 Newest Crime Books</h2>
    

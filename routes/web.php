@@ -5,8 +5,10 @@ use App\Http\Controllers\Admin\BookController as AdminBookController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\TestController;
+use App\Http\Controllers\BookController as ControllersBookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +31,11 @@ Route::get('api/test/collection', [TestController::class, 'collectionResponse'])
 
 Route::get('/home', [HomeController::class, 'home'])->middleware('auth')->name('home');
 
-Route::get('/book/{book_id}', [BookController::class, 'show'])->name('book.detail');
+Route::get('/book/{book_id}', [ControllersBookController::class, 'show']);
+
+Route::post('/book/{book_id}/review', [ReviewController::class, 'store'])->middleware('auth');
+
+Route::delete('books/{id}/reviews/{review_id}', [ReviewController::class, 'delete']);
 
 
 // all admin routes
