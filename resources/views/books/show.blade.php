@@ -58,6 +58,12 @@
             </div>
         @endif
 
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
         <form method="POST" action="/book/{{ $book->id }}/review">
             @csrf
                 @if ($errors->any())

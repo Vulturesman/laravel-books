@@ -4,10 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\BookShop;
+use App\Models\Bookshop;
 use Illuminate\Support\Facades\DB;
 
-class BookShopSeeder extends Seeder
+class BookshopSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -53,7 +53,7 @@ class BookShopSeeder extends Seeder
 
         foreach ($bookshops as $cityKey => $city) {
             foreach ($city as $shop) {
-                $bookshop = new BookShop();
+                $bookshop = new Bookshop();
                 $bookshop->city = $cityKey;
                 $bookshop->name = $shop;
                 $bookshop->save();

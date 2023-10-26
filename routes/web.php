@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\BookController as ControllersBookController;
+use App\Http\Controllers\BookshopController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ReviewController;
@@ -36,6 +37,8 @@ Route::get('/book/{book_id}', [ControllersBookController::class, 'show']);
 Route::post('/book/{book_id}/review', [ReviewController::class, 'store'])->middleware('auth');
 
 Route::delete('books/{id}/reviews/{review_id}', [ReviewController::class, 'delete']);
+
+Route::get('/bookshop/{bookshop}', [BookshopController::class, 'show']);
 
 
 // all admin routes

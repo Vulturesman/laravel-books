@@ -21,6 +21,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        $this->call(BookShopSeeder::class);
+        $this->call(BookshopSeeder::class);
     }
 }
