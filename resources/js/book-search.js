@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     result.appendChild(link);
                     result.appendChild(
                         document.createTextNode(" " + book.title)
-                    ); // Append the text content!!!!!
+                    ); // Append the text content!!!!! DICK!!
                     searchResults.appendChild(result);
                 });
             });
